@@ -76,7 +76,7 @@ $(function() {
             push_box = [];
             push_box = answer.toString().split('').map(Number);
             if(push_box.length > 17) {
-                $('.display_right').text("計算できません");
+                $('.display_right').text(answer.toPrecision(16));
             }else{
                 $('.display_right').text(answer);
             };

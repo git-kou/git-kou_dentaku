@@ -96,8 +96,11 @@ $(function() {
 
     /**イコールキーの処理 */
     $('.answer').click(function() {
+        $('.display_left').addClass('after');
         $('.display_left').text($(this).text());
-        if(en === "") {
+        if($('.display_right').text() === "0" && en_switch === false) {
+            answer = 0;
+        }else if(en === "") {
             answer = push1;
         }else if(en === "ta") {
             answer = (((push1*1)*10) + ((push2*1)*10)) / 10;
